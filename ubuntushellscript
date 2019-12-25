@@ -1,0 +1,10 @@
+#!/bin/bash
+apt update
+apt install software-properties-common -y
+apt-add-repository --yes --update ppa:ansible/ansible
+apt update
+apt install ansible -y
+apt install nginx -y
+apt install python-apt -y
+git clone https://github.com/mavrick202/ansibletemplatetesting.git /myrepo
+ansible-playbook /myrepo/playbook.yaml
