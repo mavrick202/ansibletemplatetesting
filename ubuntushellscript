@@ -6,5 +6,6 @@ apt update
 apt install ansible -y
 apt install nginx -y
 apt install python-apt -y
+apt install git -y
 git clone https://github.com/mavrick202/ansibletemplatetesting.git /myrepo
 ansible-playbook /myrepo/playbook.yaml
