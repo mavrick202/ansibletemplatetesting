@@ -10,7 +10,7 @@
       ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
     tasks:
        - name: Run Apt Update
-         shell: apt update
+         shell: apt update && apt install -y python-apt
 
        - name: Clone Git Repo
          shell: cd /tmp && git clone https://github.com/mavrick202/ansibletemplatetesting.git
