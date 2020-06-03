@@ -13,8 +13,10 @@
         <h1> Server hostname is: {{ host_name }} </h1>
         <h1> Server FQDN is: {{ fqdn_name }} </h1>
         <h1> Server IP Address is: {{ ip_address }} </h1>
-        
-
+        {% for city in {{ cities }} %}
+        <h1>Welcome To : {{ city }}</h1>
+        {% endfor %}
+           
 
        <div id="smallcont">
                 <div></div>
