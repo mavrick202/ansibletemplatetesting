@@ -13,9 +13,6 @@
        - name: Run Apt Update
          shell: apt update && apt install -y python-apt
 
-       - name: Clone Git Repo
-         shell: cd /tmp && git clone https://github.com/mavrick202/ansibletemplatetesting.git
-
        - name: Install Nginx Server
          apt: >
            name=nginx
