@@ -5,7 +5,6 @@
     vars:
       custom_heading: "Welcome To DevOps Training B13 By Sreeharsha Veerapalli"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
-      isotime: "{{ ansible_facts['date_time']['iso8601'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
       ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
