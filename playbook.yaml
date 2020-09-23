@@ -16,13 +16,6 @@
          apt: >
            name=nginx
            state=present
-       - name: Copy the main index file to destination folder.
-         copy: >
-            src=/tmp/ansibletemplatetesting/index.nginx-debian.html
-            dest=/var/www/html/index.nginx-debian.html
-            owner=root
-            group=root
-            mode=0644
        - name: Copy the files to index destination folder.
          template: >
             src=/tmp/ansibletemplatetesting/index.j2
