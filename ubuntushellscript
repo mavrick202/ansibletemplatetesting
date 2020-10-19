@@ -7,6 +7,7 @@ apt install ansible -y
 apt install nginx -y
 apt install python-apt -y
 apt install git -y
+apt install stress -y
 git clone https://github.com/mavrick202/ansibletemplatetesting.git /myrepo
 ######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING##########
 #
