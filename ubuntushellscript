@@ -9,6 +9,7 @@ apt install python-apt -y
 apt install git -y
 apt install stress -y
 git clone https://github.com/mavrick202/ansibletemplatetesting.git /myrepo
+######USE aws-autoscaling branch for testing aws autoscaling##########################
 ######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING##########
 #
 #####GIVE BELOW IN THE LAUNCH CONFIG USERDATA#####################################
