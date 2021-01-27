@@ -9,8 +9,8 @@
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
       ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
     tasks:
-       - name: Run Apt Update
-         shell: apt update && apt install -y python-apt
+#        - name: Run Apt Update
+#          shell: apt update && apt install -y python-apt
 
        - name: Install Nginx Server
          apt: >
