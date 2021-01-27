@@ -1,7 +1,13 @@
 ---
   - name: Play for Install Nginx on WebServers
     hosts: 10.1.1.146
-    gather_facts: no
+    gather_facts: yes
+    vars:
+      custom_heading: "Welcome To DevOps Training B15 By Sreeharsha Veerapalli - Testing AWX"
+      todays_date: "{{ ansible_facts['date_time']['date'] }}"
+      host_name: "{{ ansible_facts['hostname'] }}"
+      fqdn_name: "{{ ansible_facts['fqdn'] }}"
+      ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
     tasks:
        - name: Run Apt Update
          shell: apt update
