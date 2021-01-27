@@ -1,6 +1,6 @@
 ---
   - name: Play for Install Nginx on WebServers
-    hosts: localhost
+    hosts: 10.1.1.146
     gather_facts: yes
     vars:
       custom_heading: "Welcome To DevOps Training B15 By Sreeharsha Veerapalli - Testing AWX"
