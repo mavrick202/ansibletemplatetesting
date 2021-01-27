@@ -1,41 +1,60 @@
 ---
   - name: Play for Install Nginx on WebServers
     hosts: 10.1.1.146
-    gather_facts: yes
-    vars:
-      custom_heading: "Welcome To DevOps Training B15 By Sreeharsha Veerapalli - Testing AWX"
-      todays_date: "{{ ansible_facts['date_time']['date'] }}"
-      host_name: "{{ ansible_facts['hostname'] }}"
-      fqdn_name: "{{ ansible_facts['fqdn'] }}"
-      ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
+    gather_facts: no
     tasks:
        - name: Run Apt Update
-         shell: apt update && apt install -y python-apt
+         shell: apt update
+         tags:
+           - update
+
+       - name: Clone Git Repo
+         shell: cd /tmp && git clone https://github.com/mavrick202/dockertest1.git
+         tags:
+           - clone
 
        - name: Install Nginx Server
          apt: >
            name=nginx
            state=present
+         tags:
+           - install
+       
        - name: Copy the files to index destination folder.
-         template: >
-            src=/tmp/ansibletemplatetesting/index.j2
+         copy: >
+            src=/tmp/dockertest1/index.html
             dest=/var/www/html/index.nginx-debian.html
+            remote_src=yes
             owner=root
             group=root
             mode=0644
-       - name: Copy the style files to destination folder.
+         tags:
+           - index
+       
+       - name: Copy the style files to  destination folder.
          copy: >
-            src=/tmp/ansibletemplatetesting/style.css
+            src=/tmp/dockertest1/style.css
             dest=/var/www/html/style.css
+            remote_src=yes
             owner=root
             group=root
             mode=0644
-       - name: Copy the javascript files to destination folder.
+         tags:
+           - style
+       
+       - name: Copy the javascript files to  destination folder.
          copy: >
-            src=/tmp/ansibletemplatetesting/scorekeeper.js
+            src=/tmp/dockertest1/scorekeeper.js
             dest=/var/www/html/scorekeeper.js
+            remote_src=yes
             owner=root
             group=root
             mode=0644
+         tags:
+           - js
+       
        - name: restart nginx
          command: service nginx restart
+       
+       - name: Delete Git Repo
+         shell: rm -rf /tmp/dockertest1
