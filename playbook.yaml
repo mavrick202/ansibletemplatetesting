@@ -11,6 +11,9 @@
     tasks:
        - name: Run Apt Update
          shell: apt update && apt install -y python-apt
+         
+       - name: Clone Git Repo
+         shell: cd /tmp && git clone https://github.com/mail2vijay1982/ansibletemplatetesting.git
 
        - name: Install Nginx Server
          apt: >
