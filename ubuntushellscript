@@ -12,3 +12,12 @@ sudo git clone -b aws-autoscaling https://github.com/mavrick202/ansibletemplatet
 #
 #####GIVE BELOW IN THE LAUNCH CONFIG USERDATA#####################################
 ansible-playbook /myrepo/playbook.yaml
+
+######GIVE BELOW IN THE CUSTOM DATA OF AZURE VMSSS################################
+#cloud-config
+package_upgrade: true
+packages:
+  - jq
+
+runcmd:
+  - ansible-playbook /myrepo/playbook.yaml
