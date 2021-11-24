@@ -1,4 +1,5 @@
 #!/bin/bash
+#Use t2.micro. If you use t3.micro then the network interface should be ens5 in the playbook.
 sudo apt update
 sudo apt install software-properties-common -y
 sudo apt-add-repository --yes --update ppa:ansible/ansible
