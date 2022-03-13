@@ -1,13 +1,13 @@
 ---
   - name: Play for Install Nginx on WebServers
-    hosts: localhost
+    hosts: web:app:db
     gather_facts: yes
     vars:
       custom_heading: "Welcome To DevOps Training Batch 23 By Sreeharsha Veerapalli - Testing Jinja"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
-      #ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
+      friends: ['Sree','Harsha','Raju', 'Kumar']
     tasks:
        - name: Run Apt Update
          shell: apt update && apt install -y python-apt net-tools
