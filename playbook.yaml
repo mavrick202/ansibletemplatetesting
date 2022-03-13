@@ -3,14 +3,18 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To DevOps Training B15 By Sreeharsha Veerapalli - Testing AWX"
+      custom_heading: "Welcome To DevOps Training Batch 23 By Sreeharsha Veerapalli - Testing Jinja"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
-      ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
+      #ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
     tasks:
        - name: Run Apt Update
-         shell: apt update && apt install -y python-apt
+         shell: apt update && apt install -y python-apt net-tools
+
+       - name: Get-IP-Address
+         shell: ifconfig | grep -i inet | head -1 | tr -s " " | cut -d " " -f 3
+         register: ip_address
 
        - name: Install Nginx Server
          apt: >
