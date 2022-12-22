@@ -8,6 +8,7 @@
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
       ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
+      os_family: "{{ ansible_facts['os_family'] }}"
     tasks:
        - name: Run Apt Update
          shell: apt update && apt install -y python-apt
