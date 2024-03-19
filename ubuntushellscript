@@ -11,4 +11,4 @@ sudo git clone -b gcp-autoscaling https://github.com/mavrick202/ansibletemplatet
 ######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING##########
 #
 #####GIVE BELOW IN THE LAUNCH CONFIG USERDATA#####################################
-ansible-playbook /myrepo/playbook.yaml
+sudo ansible-playbook /myrepo/playbook.yaml
