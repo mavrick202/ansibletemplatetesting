@@ -3,7 +3,7 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To Telugu AWS Training B45 By Sreeharsha Veerapalli"
+      custom_heading: "Welcome To Telugu AWS Training B59 By Sreeharsha Veerapalli"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
