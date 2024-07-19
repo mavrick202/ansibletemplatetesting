@@ -11,6 +11,7 @@
     tasks:
        - name: Run Apt Update
          shell: apt update && apt install -y python-apt
+         ignore_errors: yes
 
        - name: Install Nginx Server
          apt: >
