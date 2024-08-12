@@ -10,7 +10,7 @@
       ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
     tasks:
        - name: Run Apt Update
-         shell: apt update && apt install -y python-apt
+         shell: apt update && apt install -y python3-apt
 
        - name: Install Nginx Server
          apt: >
