@@ -12,7 +12,7 @@ sudo git clone -b aws-autoscaling-ubuntu20-04 https://github.com/mavrick202/ansi
 ######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING##########
 #
 #####GIVE BELOW IN THE LAUNCH CONFIG USERDATA#####################################
-ansible-playbook /myrepo/playbook.yaml
+cd /myrepo/ && git pull && ansible-playbook /myrepo/playbook.yaml && stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 15m
 
 ######GIVE BELOW IN THE CUSTOM DATA OF AZURE VMSSS################################
 #cloud-config
