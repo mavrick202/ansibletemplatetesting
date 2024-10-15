@@ -3,7 +3,7 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To Telugu AWS Training B63 By Sreeharsha Veerapalli"
+      custom_heading: "Welcome To Telugu AWS Training B64 By Sreeharsha Veerapalli"
       custom_heading2: "Building Custom AMI With Packer"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
