@@ -9,9 +9,13 @@
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
       ip_address: "{{ ansible_facts['ens5']['ipv4']['address'] }}"
+      public_ip: "{{ publicip.stdout }}"
     tasks:
        - name: Run Apt Update
          shell: apt update && apt install -y python3-apt
+       - name: Get Public IP
+         shell: curl ipconfig.io
+         register: publicip
 
        - name: Install Nginx Server
          apt: >
