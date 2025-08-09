@@ -3,7 +3,7 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To Telugu AWS Training B71 ASG LAB"
+      custom_heading: "Welcome To Telugu AWS Training B71 ASG LAB - NEW SERVER"
       custom_heading2: "Learning Auto Scaling Groups With AWS EC2"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
