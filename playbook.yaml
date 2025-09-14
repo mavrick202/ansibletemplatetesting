@@ -4,7 +4,7 @@
     gather_facts: yes
     vars:
       custom_heading: "Welcome To DevSecOps Training By Sreeharsha Veerapalli"
-      custom_heading2: "Building Custom AMI With Packer For DevSecOps Batch 48 -- UserData Testing SUPERSTAR"
+      custom_heading2: "Building Custom AMI With Packer For DevSecOps Batch 48"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
