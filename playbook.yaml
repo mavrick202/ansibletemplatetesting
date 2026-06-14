@@ -3,8 +3,8 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To AWS Training B75 ASG LAB"
-      custom_heading2: "This Custom Image Was Been Created By Packer Along With Lambda & Eventbridge For Batch 75"
+      custom_heading: "Welcome To AWS Training B76 ASG LAB"
+      custom_heading2: "This Custom Image Was Been Created By Packer Along With Lambda & Eventbridge For Batch 76"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
