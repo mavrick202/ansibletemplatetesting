@@ -11,7 +11,12 @@ sudo apt install -y git stress
 sudo git clone -b azure-vmss-autoscaling https://github.com/mavrick202/ansibletemplatetesting.git /myrepo
 ######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING##########
 
+
 ######GIVE BELOW IN THE CUSTOM DATA OF AZURE VMSSS################################
 #cloud-config
+package_upgrade: true
+packages:
+  - jq
+
 runcmd:
   - ansible-playbook /myrepo/playbook.yaml
